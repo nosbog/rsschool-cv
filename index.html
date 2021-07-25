@@ -105,21 +105,21 @@
                         <h4>Code:</h4>
                         <hr>
                         <section class="code">
-                            <code>
-                                <pre>
+                            <pre>
+                                <code>
 function findEvenIndex(arr) {
     let map1 = new Map();
     let map2 = new Map();
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i &lt; arr.length; i++) {
     let sum = 0;
-    for (let x = 0; x < i; x++) {
+    for (let x = 0; x &lt; i; x++) {
         sum += arr[x];
     }
     map1.set(i, sum);
     }
-    for (let i = arr.length - 1; i > -1; i--) {
+    for (let i = arr.length - 1; i &gt; -1; i--) {
     let sum = 0;
-    for (let x = arr.length - 1; x > i; x--) {
+    for (let x = arr.length - 1; x &gt; i; x--) {
         sum += arr[x];
     }
     map2.set(i, sum);
@@ -131,8 +131,8 @@ function findEvenIndex(arr) {
     }
     return -1;
 }
-                            </pre>
-                        </code>
+                            </code>
+                        </pre>
                         </section>    
                     </div>
                 </div>
@@ -146,7 +146,7 @@ function findEvenIndex(arr) {
             </article>
         </div>
     </main>
-
+&lt; fsfs
     <footer>
         <hr>
         <div class="flex-container">
