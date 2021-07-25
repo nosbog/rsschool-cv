@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cv</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="flex-container">
+                <div class="flex-item" style="order: 1">
+                   <img src="img/photo_2021-06-18_20-23-47.jpg" alt="this cat definetly wants to eat me, for sure">
+                </div>
+                <div class="flex-item" style="order: 3">
+                   <div class="text-item1">
+                       Noskov Bogdan <br>
+                       (29.10.1999)
+                   </div>
+                </div>
+                <div class="flex-item" style="order: 1">
+                    <div class="text-item2">
+                        <h2>Contacts:</h2>
+                    </div>
+                    <ul>
+                        <li><a href="https://vk.com/nosbog">VK: nosbog</a></li>
+                        <li><a href="https://github.com/nosbog">GitHub: nosbog</a></li>
+                        <li><a href="https://t.me/nosbog">Telegram: nosbog</a></li>
+                        <li><a href="mailto:noskovbogdan@gmail.com">Email: noskovbogdan@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <hr>
+
+    <main>
+        <div class="container">
+            <article class="brief-information">
+                    <h2>
+                        Brief information
+                    </h2>
+                    <hr>
+                    <div class="brief-information-text">
+                        I look forward to successfully completing the rs-school course and have the opportunity to become a professional full stack developer.
+                        <br>
+                        <br>
+                        In 2017 entered the BSEU on a full-time basis. A month before graduation decided to leave the university because I was not positive about the profession I was receiving.
+                        
+                    </div>
+            </article> 
+            <article class="skills">
+                <h2>
+                    Skills
+                </h2>
+                <hr>
+                <h3>
+                    Programming/Markup Languages (basic knowledge)
+                </h3>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>HTML/CSS</li>
+                </ul>
+                <h3>
+                    Technologies
+                </h3>
+                <ul>
+                    <li>SASS</li>
+                    <li>BEM (methodology)</li>
+                    <li>GIT</li>
+                    <li>Chrome DevTools</li>
+                    <li>Washing Machine</li>
+                </ul>
+            </article>
+
+            <article class="code-example">
+                <h2>Code example</h2>
+                <hr>
+                <h3>Equal Sides Of An Array (6kyu)</h3>
+                <div class="flex-container">
+                    
+                    <div class="flex-item">
+                        <h4>Details:</h4>
+                        <hr>
+                        You are going to be given an array of integers. Your job is to take that array and find an index N where the sum of the integers to the left of N is equal to the sum of the integers to the right of N. If there is no index that would make this happen, return -1.
+                        <br><br>
+                        For example:
+                        <br>
+                        Let's say you are given the array {1,2,3,4,3,2,1}:
+                        Your function will return the index 3, because at the 3rd position of the array, the sum of left side of the index ({1,2,3}) and the sum of the right side of the index ({3,2,1}) both equal 6.
+                        <br><br>
+                        Let's look at another one.
+                        <br>
+                        You are given the array {1,100,50,-51,1,1}:
+                        Your function will return the index 1, because at the 1st position of the array, the sum of left side of the index ({1}) and the sum of the right side of the index ({50,-51,1,1}) both equal 1.
+                    </div>
+                    <div class="flex-item" style="flex-basis: 50px"></div>
+                    <div class="flex-item">
+                        <h4>Code:</h4>
+                        <hr>
+                        <section class="code">
+                            <pre>
+function findEvenIndex(arr) {
+    let map1 = new Map();
+    let map2 = new Map();
+    for (let i = 0; i < arr.length; i++) {
+    let sum = 0;
+    for (let x = 0; x < i; x++) {
+        sum += arr[x];
+    }
+    map1.set(i, sum);
+    }
+    for (let i = arr.length - 1; i > -1; i--) {
+    let sum = 0;
+    for (let x = arr.length - 1; x > i; x--) {
+        sum += arr[x];
+    }
+    map2.set(i, sum);
+    }
+    for (let [key1, value1] of map1) {
+    for (let [key2, value2] of map2) {
+        if ((value1 == value2) && (key1 == key2)) return key1;
+    }
+    }
+    return -1;
+}
+                            </pre>
+                        </section>    
+                    </div>
+                </div>
+                
+            </article>
+
+            <article class="English">
+                <h2>English</h2>
+                <hr>
+                English Level: B1+
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        <div class="flex-container">
+            <div class="flex-item"><img src="img/rs_school_js.svg" alt="rsschool icon"></div>
+            <div class="flex-item" style="flex-basis: 80px"></div>
+            <div class="flex-item">
+                <h2>Links:</h2>
+                <ul>
+                    <li>
+                        <a href="https://github.com/nosbog">My Github: https: //github.com/nosbog</a>
+                    </li>
+                    <li>
+                        <a href="https://rs.school/js/">Rs-school course: //rs.school/js/</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
