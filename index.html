@@ -104,21 +104,19 @@
                     <div class="flex-item">
                         <h4>Code:</h4>
                         <hr>
-                        <section class="code">
-                            <pre>
-function findEvenIndex(arr) {
+                            <pre><code>function findEvenIndex(arr) {
     let map1 = new Map();
     let map2 = new Map();
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i &lt; arr.length; i++) {
     let sum = 0;
-    for (let x = 0; x < i; x++) {
+    for (let x = 0; x &lt; i; x++) {
         sum += arr[x];
     }
     map1.set(i, sum);
     }
-    for (let i = arr.length - 1; i > -1; i--) {
+    for (let i = arr.length - 1; i &gt; -1; i--) {
     let sum = 0;
-    for (let x = arr.length - 1; x > i; x--) {
+    for (let x = arr.length - 1; x &gt; i; x--) {
         sum += arr[x];
     }
     map2.set(i, sum);
@@ -130,8 +128,8 @@ function findEvenIndex(arr) {
     }
     return -1;
 }
+                                </code>
                             </pre>
-                        </section>    
                     </div>
                 </div>
                 
@@ -151,20 +149,24 @@ function findEvenIndex(arr) {
             <div class="flex-item"><img src="img/rs_school_js.svg" alt="rsschool icon"></div>
             <div class="flex-item" style="flex-basis: 80px"></div>
             <div class="flex-item">
-                <h2>Links:</h2>
-                <ul>
-                    <li>
-                        <a href="https://github.com/nosbog">My Github: https: //github.com/nosbog</a>
-                    </li>
-                    <li>
-                        <a href="https://rs.school/js/">Rs-school course: //rs.school/js/</a>
-                    </li>
-                </ul>
+                <section>
+                    <h2>Links:</h2>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/nosbog">My Github: https: //github.com/nosbog</a>
+                        </li>
+                        <li>
+                            <a href="https://rs.school/js/">Rs-school course: //rs.school/js/</a>
+                        </li>
+                    </ul>
+                </section>
             </div>
             <div class="flex-item" style="flex-basis: 80px"></div>
             <div class="flex-item">
-                <h2>Date:</h2>
-                <p>25.07.2021</p>
+                <section>
+                    <h2>Date:</h2>
+                    <p>25.07.2021</p>
+                </section>
             </div>
         </div>
     </footer>
