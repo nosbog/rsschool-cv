@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <link href="css/prism.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -41,18 +44,18 @@
                 <div class="description">
                     <ul>
                         <li>
-                            vkontakte: <a href="https://vk.com/nosbog">nosbog</a>
+                            <a href="https://vk.com/nosbog" target="_blank"><span class="network-name">vkontakte: </span><span class="login">nosbog</span></a>
                         </li>
                         <li>
-                            telegram: <a href="https://t.me/nosbog">nosbog</a>
+                            <a href="https://t.me/nosbog" target="_blank"><span class="network-name">telegram: </span><span class="login">nosbog</span></a>
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            github: <a href="https://github.com/nosbog">nosbog</a>
+                            <a href="https://github.com/nosbog" target="_blank"><span class="network-name">github: </span><span class="login">nosbog</span></a>
                         </li>
                         <li>
-                            email: <a href="mailto:noskovbogdan@gmail.com">noskovbogdan@gmail.com</a>
+                            <a href="mailto:noskovbogdan@gmail.com" target="_blank"><span class="network-name">email: </span><span class="login">noskovbogdan@gmail.com</span></a>
                         </li>
                     </ul>
                 </div>
@@ -98,6 +101,7 @@
                         <div class="card-title">Others:</div>
                         <ul>
                             <li>SASS/SCSS</li>
+                            <li>BEM</li>
                             <li>Git (+github)</li>
                             <li>Figma</li>
                             <li>Chrome DevTools</li>
@@ -119,8 +123,119 @@
         <div class="left-side-bg"></div>
         <div class="right-side-bg"></div>
         <div class="container">
-            
+            <div class="fifth-screen-container">
+                <div class="title">
+                    Code Examples
+                </div>
+                <div class="description">
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-title">
+                                <a href="https://rolling-scopes-school.github.io/nosbog-JSFEPRESCHOOL/js30-part2/" target="_blank">Wack-A-Mole</a>
+                            </div>
+                            <ul>
+                                <li>Game</li>
+                                <li>HTML CSS JS</li>
+                                <li>for Desktop</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <a href="https://rolling-scopes-school.github.io/nosbog-JSFEPRESCHOOL/js30-part1/" target="_blank">Space Slider</a>
+                            </div>
+                            <ul>
+                                <li>Vertical Slider</li>
+                                <li>HTML CSS JS</li>
+                                <li>for Desktop</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <a href="https://rolling-scopes-school.github.io/nosbog-JSFEPRESCHOOL/museum/" target="_blank">Louvre</a>
+                            </div>
+                            <ul>
+                                <li>Landing Page</li>
+                                <li>HTML CSS</li>
+                                <li>for Desktop</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-task">Task - <a href="https://github.com/nosbog/basic-js/tree/master/src" target="_blank">Basic-js (Js/Front-end 2021Q3 task)</a></div>
+                        <div class="example-task">Task - <span>All possible permutations of elements in a given array:</span></div>
+                        <pre><code class="language-javascript">function permute(dictionary) {
+    let result = [];
+    if (dictionary.length === 0) return [];
+    if (dictionary.length === 1) return [dictionary];
+
+    for (let i = 0; i &lt; dictionary.length; i++) {
+        let current = dictionary[i];
+        let rest = dictionary.slice(0, i).concat(dictionary.slice(i + 1));
+        let restPermuted = permute(rest);
+
+        for (let j = 0; j &lt; restPermuted.length; j++) {
+        let permutedArray = [current].concat(restPermuted[j]);
+        result.push(permutedArray)
+        }
+    }
+    return result
+}</code></pre>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class="sixth-screen">
+        <div class="left-side-bg"></div>
+        <div class="right-side-bg"></div>
+        <div class="container">
+            <div class="sixth-screen-container">
+                <div class="title">
+                    Video Resume
+                </div>
+                <div class="description">
+                    add video
+                </div>
+            </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-item">
+                    <a href="https://rs.school/js/" target="_blank"><img src="assets/img/rs_school_js.svg" alt="rs_school"></a>
+                </div>
+
+                <div class="footer-item">
+                    <div class="footer-title">
+                        Links:
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/nosbog" target="_blank"><span class="network-name">My github: </span><span class="login">github.com/nosbog</span></a>
+                        </li>
+                        <li>
+                            <a href="https://rs.school/js/" target="_blank"><span class="network-name">RS-school: </span><span class="login">rs.school/js/</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-item">
+                    <div class="footer-title">
+                        Date:
+                    </div>
+                    <ul>
+                        <li>
+                            September 2021
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/prism.js"></script>
 </body>
 </html>

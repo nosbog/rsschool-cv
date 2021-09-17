@@ -35,6 +35,30 @@ $dark-yellow: rgb(211, 208, 129);
     width: 100%;
     height: 2px;
 }
+.title {
+    padding: 70px;
+    font-size: 28px;
+    // font-weight: 700;
+    text-align: right;
+    color: $title;
+}
+.description {
+    padding: 70px;
+    font-size: 20px;
+    color: $grey-text;
+}
+.card {
+    width: 26%;
+    ul {
+     list-style-type: none;
+    }
+    .card-title {
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: $bright-pink;
+    }
+}
+
 .first-screen {
     position: relative;
     .first-screen-container {
@@ -89,19 +113,6 @@ $dark-yellow: rgb(211, 208, 129);
     }
 }
 
-.title {
-    padding: 70px;
-    font-size: 28px;
-    // font-weight: 700;
-    text-align: right;
-    color: $title;
-}
-.description {
-    padding: 70px;
-    font-size: 20px;
-    color: $grey-text;
-}
-
 .second-screen {
     position: relative;
     .left-side-bg {
@@ -124,13 +135,22 @@ $dark-yellow: rgb(211, 208, 129);
             justify-content: space-around;
             align-items: center;
             ul {
-                color: $bright-pink;
-                font-weight: 600;
                 list-style-type: none;
                 a {
                     text-decoration: none;
-                    font-weight: 400;
-                    color: $grey-text;
+                    .network-name {
+                        color: $bright-pink;
+                        font-weight: 600;
+                    }
+                    .login {
+                        font-weight: 400;
+                        color: $grey-text;
+                    }
+                    &:hover {
+                        .login {
+                            text-decoration: underline $title;
+                        }
+                    }
                 }
             }
         }
@@ -179,18 +199,129 @@ $dark-yellow: rgb(211, 208, 129);
            align-items: flex-start;
            flex-wrap: wrap;
            background-color: $bright-grey-bg;
-           .card {
-               width: 26%;
-               ul {
-                list-style-type: none;
-               }
-               .card-title {
-                   margin-bottom: 5px;
-                   font-weight: 600;
-                   color: $bright-pink;
-               }
-           }
        }
     }
-   
+}
+
+.fifth-screen {
+    position: relative;
+    .left-side-bg {
+        background-color: $bright-grey-bg;
+    }
+    .right-side-bg {
+        background-color: white;
+    }
+    .fifth-screen-container {
+        display: grid;
+        grid-template-columns: 3fr 7fr;
+        grid-template-rows: auto;
+        .titile {
+            background-color: $bright-grey-bg;
+        }
+        .description {
+            background-color: white;
+            .card-container {
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-start;
+                .card {
+                    a {
+                        color: $bright-pink;
+                        &:hover {
+                            text-decoration: underline $title;
+                        }
+                    }
+                }
+            }
+            .example {
+                margin-top: 70px;
+                .example-task {
+                    margin-bottom: 25px;
+                    color: $bright-pink;
+                    font-weight: 600;
+                    span {
+                        color: $grey-text;
+                        font-weight: 400;
+                    }
+                    a {
+                        color: $grey-text;
+                        font-weight: 400;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline $title;
+                        }
+                    }
+                    pre {
+                        background-color: $bright-grey-bg;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sixth-screen {
+    position: relative;
+    .left-side-bg {
+        background-color: $grey-bg;
+    }
+    .right-side-bg {
+        background-color: $bright-grey-bg;
+    }
+    .sixth-screen-container {
+        display: grid;
+        grid-template-columns: 3fr 7fr;
+        grid-template-rows: auto;
+        .titile {
+            background-color: $grey-bg;
+        }
+        .description {
+            background-color: $bright-grey-bg;
+        }
+    }
+}
+
+footer {
+    background-color: white;
+    padding: 70px;
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        .footer-item {
+            img {
+                display: block;
+                margin: 0 auto;
+                width: 270px;
+            }
+            .footer-title {
+                margin-bottom: 10px;
+                font-size: 35px;
+                color: $title;
+            }
+            ul {
+                list-style-type: none;
+                li {
+                    font-size: 20px;
+                    color: $grey-text;
+                }
+                a {
+                    text-decoration: none;
+                    font-size: 20px;
+                    .network-name {
+                        color: $bright-pink;
+                        font-weight: 600;
+                    }
+                    .login {
+                        font-weight: 400;
+                        color: $grey-text;
+                    }
+                    &:hover {
+                        .login {
+                            text-decoration: underline $title;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
