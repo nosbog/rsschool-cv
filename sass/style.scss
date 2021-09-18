@@ -226,19 +226,39 @@ $dark-yellow: rgb(211, 208, 129);
             background-color: white;
             .card-container {
                 display: flex;
-                justify-content: space-around;
-                align-items: flex-start;
-                .card {
+                flex-direction: column;
+                // justify-content: space-around;
+                align-items: center;
+                .card-and-photo {
+                    margin-bottom: 30px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    a:hover + .card a {
+                        color: red;
+                    }
+
                     a {
-                        color: $bright-pink;
-                        &:hover {
-                            text-decoration: underline $title;
+                        width: 50%;
+                        img {
+                            width: 100%;
+                            border-radius: 5px;
+                        }
+                    }
+                   
+                    .card {
+                        a {
+                            color: $bright-pink;
+                            &:hover {
+                                text-decoration: underline $title;
+                            }
                         }
                     }
                 }
             }
+
             .example {
-                margin-top: 70px;
+                // margin-top: 70px;
                 .example-task {
                     margin-bottom: 25px;
                     color: $bright-pink;
@@ -287,7 +307,7 @@ $dark-yellow: rgb(211, 208, 129);
 
 footer {
     background-color: white;
-    padding: 70px;
+    padding: 70px 0;
     .footer-container {
         display: grid;
         grid-template-columns: 1.5fr 1fr 1fr;
