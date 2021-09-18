@@ -76,6 +76,11 @@ $dark-yellow: rgb(211, 208, 129);
             img {
                 border-radius: 50%;
                 width: 250px;
+                transition: all 0.8s;
+                &:hover {
+                    transform: rotate(1turn);
+
+                }
             }
         }
         .header {
@@ -234,18 +239,19 @@ $dark-yellow: rgb(211, 208, 129);
                     display: flex;
                     justify-content: space-around;
                     align-items: center;
-                    a:hover + .card a {
-                        color: red;
-                    }
 
                     a {
                         width: 50%;
+                        transition: all 0.2s;
                         img {
                             width: 100%;
                             border-radius: 5px;
                         }
+                        &:hover {
+                            transform: scale(0.95);
+                        }
                     }
-                   
+
                     .card {
                         a {
                             color: $bright-pink;
@@ -316,6 +322,10 @@ footer {
                 display: block;
                 margin: 0 auto;
                 width: 270px;
+                transition: all 0.2s;
+                &:hover {
+                    transform: scale(0.95);
+                }
             }
             .footer-title {
                 margin-bottom: 10px;
