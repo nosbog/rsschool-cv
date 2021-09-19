@@ -7,6 +7,7 @@
     font-family: 'Lato', sans-serif;
 }
 
+$grey-border: rgb(238, 238, 238);
 $grey-bg: #f8f8f8;
 $bright-grey-bg: #fbfbfb;
 $title: #9c89b8;
@@ -112,14 +113,14 @@ $dark-yellow: rgb(211, 208, 129);
                 font-size: 20px;
                 color: $grey-text;
             }
-            .contacts {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 10%;
+            // .contacts {
+            //     position: absolute;
+            //     bottom: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 10%;
                 
-            }
+            // }
         }
     }
 }
@@ -129,31 +130,31 @@ nav {
     z-index: 100;
     position: sticky;
     top: 0;
-    padding: 10px 400px 10px 400px;
-    border: 1px solid rgb(211, 208, 129);
+    padding: 12px 0;
+    border-top: 1px solid $grey-border;
+    border-bottom: 1px solid $grey-border;
     background-color: white;
-    transition: all 0.2s;
-    &:hover {
-        border: 1px solid $title;
-    }
     ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
+        margin: 0 auto;
+        max-width: 750px;
         list-style-type: none;
         li {
             a {
                 text-decoration: none;
                 color: $grey-text;
-                font-size: 24px;
-                font-weight: 600;
-                transition: all 0.2s;
-                &:hover {
-                    color: $title;
-                }
+                font-size: 20px;
                 img {
                     width: 10%;
+                }
+            }
+            .up {
+                transition: all 0.2s;
+                &:hover {
+                    color: $dark-yellow;
                 }
             }
         }

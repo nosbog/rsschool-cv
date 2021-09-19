@@ -54,7 +54,7 @@
                 <a href="#video">Video Resume</a>
             </li>
             <li>
-                <a href="#header">up</a>
+                <a href="#header" class="up">up</a>
             </li>
         </ul>
     </nav>
@@ -210,22 +210,22 @@
                             <div class="example-task">Task - <a href="https://github.com/nosbog/basic-js/tree/master/src" target="_blank">Basic-js (Js/Front-end 2021Q3 task)</a></div>
                             <div class="example-task">Task - <span>All possible permutations of elements in a given array:</span></div>
                             <pre><code class="language-javascript">function permute(dictionary) {
-        let result = [];
-        if (dictionary.length === 0) return [];
-        if (dictionary.length === 1) return [dictionary];
-    
-        for (let i = 0; i &lt; dictionary.length; i++) {
-            let current = dictionary[i];
-            let rest = dictionary.slice(0, i).concat(dictionary.slice(i + 1));
-            let restPermuted = permute(rest);
-    
-            for (let j = 0; j &lt; restPermuted.length; j++) {
-            let permutedArray = [current].concat(restPermuted[j]);
-            result.push(permutedArray)
-            }
-        }
-        return result
-    }</code></pre>
+  let result = [];
+  if (dictionary.length === 0) return [];
+  if (dictionary.length === 1) return [dictionary];
+
+  for (let i = 0; i &lt; dictionary.length; i++) {
+   let current = dictionary[i];
+   let rest = dictionary.slice(0, i).concat(dictionary.slice(i + 1));
+   let restPermuted = permute(rest);
+
+   for (let j = 0; j &lt; restPermuted.length; j++) {
+   let permutedArray = [current].concat(restPermuted[j]);
+   result.push(permutedArray)
+   }
+  }
+  return result
+}</code></pre>
                         </div>
                     </div>
                 </div>
