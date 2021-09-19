@@ -128,6 +128,42 @@
         padding: 20px;
     }
 
+    .nav-button {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 35vw;
+        height: 100vh;
+        padding: 20px 40px;
+        border: 2px solid $grey-border;
+        transform: translateX(200%);
+        ul {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100%;
+            li {
+                height: 10%;
+                width: 100%;
+                margin-bottom: 10px;
+                a {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+                .up {
+                    color: $dark-yellow;
+                }
+            }
+        }
+    }
+
     .first-screen {
         .first-screen-container {
             .photo {
@@ -187,6 +223,10 @@
             }
         }
     }
+
+    nav {
+        width: 50vw;
+    }
 }
 
 
@@ -238,6 +278,10 @@
         }
     }
 
+    nav {
+        width: 60vw;
+    }
+
     footer {
         .footer-container {
             .footer-item {
@@ -271,6 +315,10 @@
                 margin: 20px 0;
             }
         }
+    }
+
+    nav {
+        width: 70vw;
     }
 
     .fifth-screen {
@@ -337,6 +385,11 @@
         }
     }
 
+    nav {
+        padding-left: 100px;
+        width: 100vw;
+    }
+
     .second-screen {
         .second-screen-container {
             .description {
@@ -386,6 +439,10 @@
     }
     .description {
         padding: 10px;
+    }
+
+    nav {
+        padding-left: 70px;
     }
 
     footer {
