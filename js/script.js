@@ -17,6 +17,7 @@ navLinks.forEach((elem) => {
 
 console.log(
     `Общий балл: 150
+    
     1) верстка валидная: +10
     2) верстка семантическая: + 20 (header, nav, main, footer, time, article, section, h1, h2, h3)
     3) использовались css стили: +10
