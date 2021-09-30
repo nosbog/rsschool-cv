@@ -15,6 +15,20 @@ $bright-pink: #f0a6ca;
 $grey-text: #939393;
 $dark-yellow: rgb(211, 208, 129);
 
+
+::-webkit-scrollbar {
+    width: auto;
+}
+::-webkit-scrollbar-track {
+    border: 3px solid $dark-yellow;
+    margin: 1vh 0;
+    border-radius: 100vw;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 100vw;
+    border: 3px solid $title;
+}
+
 .container {
     margin: 0 auto;
     max-width: 1300px;
