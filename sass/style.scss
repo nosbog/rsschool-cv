@@ -139,6 +139,19 @@ $dark-yellow: rgb(211, 208, 129);
     }
 }
 
+.certificate {
+    display: inline-block;
+    text-decoration: none;
+    color: #939393;
+    text-decoration: underline;
+    text-decoration-color: #9c89b8;
+    transition: 0.1s;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
 .showNav {
     transform: translateX(0);
 }
@@ -310,7 +323,7 @@ nav {
        }
        .description {
            display: flex;
-           justify-content: space-around;
+            gap: 50px;
            align-items: flex-start;
            flex-wrap: wrap;
            background-color: $bright-grey-bg;
